@@ -5,9 +5,11 @@ import { jsonData } from "@/utils/types";
 import { NextResponse } from "next/server";
 
 export async function GET() {
+  console.log("using allData");
   const fileName = url.fileURLToPath(import.meta.url);
   const dirname = path.dirname(fileName);
   const pathUrl = path.join(dirname, "..", "..", "..", "converts.json");
+  console.log(pathUrl);
 
   try {
     const data = await fs.readFile(pathUrl, { encoding: "utf-8" });
