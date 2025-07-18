@@ -56,7 +56,7 @@ export async function getAllData() {
     const callEndPoint = await axios.get(`${baseUrl}/api/allData`);
     /*  console.log("jsem tu");
     const callEndPoint = await axios.get("/api/allData"); */
-    console.log(callEndPoint.data);
+    console.log(callEndPoint.data as jsonData[]);
     return callEndPoint.data as jsonData[];
   } catch (error) {
     throw new Error("not able to read endpoint");
