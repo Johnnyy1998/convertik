@@ -29,11 +29,13 @@ export async function handleForm(e: React.FormEvent<HTMLFormElement>) {
 }
 
 export async function getStatistic() {
+  console.log("jsem tu");
   try {
     const response = await fetch("/api/statistic", {
       method: "Get",
       headers: { ContentType: "application/json" },
     });
+    console.log(response);
     if (!response) {
       throw new Error("fail to read data");
     }
@@ -45,7 +47,9 @@ export async function getStatistic() {
 
 export async function getAllData() {
   try {
+    console.log("jsem tu");
     const callEndPoint = await axios.get("/api/allData");
+    console.log(callEndPoint);
     return callEndPoint.data as jsonData[];
   } catch (error) {
     throw new Error("not able to read endpoint");
