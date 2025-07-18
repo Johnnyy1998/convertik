@@ -47,9 +47,16 @@ export async function getStatistic() {
 
 export async function getAllData() {
   try {
-    console.log("jsem tu");
-    const callEndPoint = await axios.get("/api/allData");
-    console.log(callEndPoint);
+    // Získání aktuálního hostitele (URL)
+    const baseUrl =
+      typeof window !== "undefined"
+        ? window.location.origin
+        : "https://default-url.com";
+
+    const callEndPoint = await axios.get(`${baseUrl}/api/allData`);
+    /*  console.log("jsem tu");
+    const callEndPoint = await axios.get("/api/allData"); */
+    console.log(callEndPoint.data);
     return callEndPoint.data as jsonData[];
   } catch (error) {
     throw new Error("not able to read endpoint");
