@@ -1,4 +1,4 @@
-import { getGraphqlEndPoint } from "@/utils/actions";
+/* import { getGraphqlEndPoint } from "@/utils/actions";
 import { useQuery } from "@tanstack/react-query";
 
 function TestGraphql() {
@@ -13,3 +13,4 @@ function TestGraphql() {
 }
 
 export default TestGraphql;
+ */

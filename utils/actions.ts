@@ -61,7 +61,7 @@ export async function deleteItem(id: number) {
   }
 }
 
-// GRAPGQL endpoints asking
+/* // GRAPGQL endpoints asking
 
 export async function getGraphqlEndPoint() {
   try {
@@ -110,3 +110,4 @@ export async function getAllDatGraphQL() {
     throw new Error("not able to read endpoint");
   }
 }
+ */

@@ -2,7 +2,7 @@
 import Landing from "@/components/Landing";
 import NextStatistic from "@/components/NextStatistic";
 import Statistic from "@/components/Statistic";
-import TestGraphql from "@/components/TestGraphql";
+/* import TestGraphql from "@/components/TestGraphql"; */
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 // Create a client
@@ -15,7 +15,7 @@ export default function Home() {
         <Landing />
         <Statistic />
         <NextStatistic />
-        <TestGraphql />
+        {/* <TestGraphql /> */}
       </div>
     </QueryClientProvider>
   );

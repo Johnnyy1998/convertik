@@ -1,11 +1,11 @@
 // app/api/graphql/route.ts
-
+/*
 import { createSchema, createYoga } from "graphql-yoga";
 import { readFile } from "fs/promises";
 import path from "path";
 import { NextRequest } from "next/server";
 
-const typeDefs = /* GraphQL */ `
+const typeDefs =  `
   type Convert {
     id: ID!
     from: String!
@@ -59,4 +59,4 @@ const yoga = createYoga<{
   fetchAPI: { Response },
 });
 
-export { yoga as GET, yoga as POST };
+export { yoga as GET, yoga as POST }; */
