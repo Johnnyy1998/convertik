@@ -1,4 +1,7 @@
-import { deleteItem, getAllData, getAllDatGraphQL } from "@/utils/actions";
+import {
+  deleteItem,
+  getAllData /* , getAllDatGraphQL */,
+} from "@/utils/actions";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
 function NextStatistic() {
@@ -16,7 +19,7 @@ function NextStatistic() {
 
   const { data, isLoading, isError } = useQuery({
     queryKey: ["allData"],
-    queryFn: getAllDatGraphQL,
+    queryFn: getAllData,
   });
 
   // Pokud se data načítají
